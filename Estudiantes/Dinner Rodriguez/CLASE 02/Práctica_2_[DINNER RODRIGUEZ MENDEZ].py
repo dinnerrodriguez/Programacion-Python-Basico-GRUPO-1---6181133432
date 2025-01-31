@@ -2,31 +2,31 @@
 PRACTICA 2:
 
 """
-lista = [1,2,3,4,5,6,7,8,9,10]
+numeros = [1,2,3,4,5,6,7,8,9,10]
 extension = (11,12,13,14,15)
-print(lista)
+print(numeros)
 
-lista.extend(extension)
-print (lista)
+numeros.extend(extension)
+print (numeros)
 
-lista.append(16)
-print (lista)
+numeros.append(16)
+print (numeros)
 
-lista.insert(0,0)
-print(lista)
+numeros.insert(0,0)
+print(numeros)
 
-lista.remove(5)
-print(lista)
+numeros.remove(5)
+print(numeros)
 
-lista.pop(-1)
-print(lista)
+numeros.pop(-1)
+print(numeros)
 
-ultimo_numero = lista.pop()
+ultimo_numero = numeros.pop()
 print(ultimo_numero)
-print(lista)
+print(numeros)
 
 
-# Crear un archivo en modo escritura 
+# Crear un archivo en modo escritura
 # Especificar la ruta completa donde quieres guardar el archivo
 
 import os
@@ -34,8 +34,6 @@ import os
 # Obtener la ruta de la carpeta Descargas del usuario
 ruta_descargas = os.path.join(os.path.expanduser("~"), "Downloads", "numeros.txt")
 
-# Lista de números a escribir en el archivo
-numeros = [1, 2, 3, 4, 5]
 
 # Crear el archivo en modo escritura y escribir los números en líneas separadas
 with open(ruta_descargas, "w") as archivo:
@@ -58,3 +56,19 @@ open(..., "w") abre el archivo en modo escritura, creando o sobrescribiendo su c
 
 """
 
+
+# Ruta del archivo (debe existir previamente)
+
+ruta_descargas = os.path.join(os.path.expanduser("~"), "Downloads", "numeros.txt")
+
+# Abrir el archivo en modo lectura
+archivo = open(ruta_descargas, "r")
+
+# Leer todo el contenido del archivo
+contenido = archivo.read()
+
+# Mostrar el contenido
+print(contenido)
+
+# Cerrar el archivo
+archivo.close()
